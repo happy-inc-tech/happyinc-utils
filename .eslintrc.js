@@ -10,6 +10,7 @@ module.exports = {
     ],
     rules: {
         'no-console': 'error',
-        'no-debugger': 'error'
+        'no-debugger': 'error',
+        '@typescript-eslint/ban-ts-comment': 'off'
     }
 };
