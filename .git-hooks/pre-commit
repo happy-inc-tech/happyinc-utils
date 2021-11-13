@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
+npm run lint
 npm run clean
 npm run build
-npm run lint
 git add .
