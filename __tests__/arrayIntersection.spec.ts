@@ -5,7 +5,7 @@ const testArr = [2];
 
 describe('Array intersection', function () {
     test('Works correctly with primitives', () => {
-        let inter = arrayIntersection([0, 1, 2], [3, 2, 4]);
+        let inter = arrayIntersection([0, 1, 2], [3, 2, 4], [2, 5, 10]);
         expect(inter.length).toBe(1);
         expect(inter[0]).toBe(2);
 
