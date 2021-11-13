@@ -12,6 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
+    "lib": ["dom","ES2021"],
     // "strictNullChecks": true,
     // "strictFunctionTypes": true,
     // "strictBindCallApply": true,
