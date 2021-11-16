@@ -28,8 +28,9 @@ export default class VueReactiveMap {
         return !!this.findItemInternalKey(key);
     }
     get(key) {
+        var _a, _b;
         const internalKey = this.findItemInternalKey(key);
-        return internalKey ? this.storage[internalKey]?.value ?? null : null;
+        return internalKey ? (_b = (_a = this.storage[internalKey]) === null || _a === void 0 ? void 0 : _a.value) !== null && _b !== void 0 ? _b : null : null;
     }
     keys() {
         return this.getPartialItems('originalKey');
@@ -63,10 +64,11 @@ export default class VueReactiveMap {
         return Object.values(this.storage).map((item) => item[part]);
     }
     findItemInternalKey(key) {
-        return (Object.entries(this.storage).find(([, item]) => {
+        var _a, _b;
+        return ((_b = (_a = Object.entries(this.storage).find(([, item]) => {
             return (item.originalKey === key ||
                 (Number.isNaN(item.originalKey) && Number.isNaN(key)));
-        })?.[0] ?? null);
+        })) === null || _a === void 0 ? void 0 : _a[0]) !== null && _b !== void 0 ? _b : null);
     }
     static createInternalKey() {
         return Math.random().toString(16).slice(2, 10);

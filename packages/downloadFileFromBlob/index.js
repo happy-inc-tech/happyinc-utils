@@ -7,7 +7,7 @@ export default function downloadFileFromBlob(blob, name) {
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = name ?? new Date().toLocaleString();
+    link.download = name !== null && name !== void 0 ? name : new Date().toLocaleString();
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
