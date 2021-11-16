@@ -4,7 +4,7 @@
   "description": "Helper functions we use at Happy Inc",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && ./bin/update-package-json.mjs",
+    "build": "tsc",
     "clean": "rm -rf ./packages",
     "test": "jest",
     "lint": "eslint './src/**/*.ts' --quiet --fix",
@@ -34,25 +34,5 @@
   },
   "peerDependencies": {
     "vue": "^2.6.14"
-  },
-  "exports": {
-    "./VueReactiveMap": "./packages/VueReactiveMap/index.js",
-    "./arrayIntersection": "./packages/arrayIntersection/index.js",
-    "./captalizeFirstLetter": "./packages/captalizeFirstLetter/index.js",
-    "./chunkArray": "./packages/chunkArray/index.js",
-    "./decapitalizeFirstLetter": "./packages/decapitalizeFirstLetter/index.js",
-    "./downloadFileFromBlob": "./packages/downloadFileFromBlob/index.js",
-    "./isUUID": "./packages/isUUID/index.js",
-    "./notNullish": "./packages/notNullish/index.js",
-    "./parseQueryString": "./packages/parseQueryString/index.js",
-    "./randomUUID": "./packages/randomUUID/index.js",
-    "./walk": "./packages/walk/index.js"
-  },
-  "typesVersions": {
-    "*": {
-      "chunkArray": [
-        "./packages/chunkArray/index.d.ts"
-      ]
-    }
   }
 }
