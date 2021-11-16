@@ -44,6 +44,7 @@
     "./isUUID": "./packages/isUUID/index.js",
     "./notNullish": "./packages/notNullish/index.js",
     "./parseQueryString": "./packages/parseQueryString/index.js",
-    "./randomUUID": "./packages/randomUUID/index.js"
+    "./randomUUID": "./packages/randomUUID/index.js",
+    "./walk": "./packages/walk/index.js"
   }
 }
