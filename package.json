@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "eslint './src/**/*.ts' --quiet --fix",
     "dev": "tsc --w",
-    "postinstall": "for file in `ls .git-hooks`; do ln -sf ../../.git-hooks/${file} .git/hooks/${file}; done"
+    "prepare": "for file in `ls .git-hooks`; do ln -sf ../../.git-hooks/${file} .git/hooks/${file}; done"
   },
   "keywords": [
     "happy",
