@@ -14,4 +14,3 @@ export default function randomUUID() {
         return v.toString(16);
     });
 }
-//# sourceMappingURL=index.js.map

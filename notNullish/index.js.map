@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/notNullish/index.ts"],"names":[],"mappings":"AAAA;;;GAGG;AACH,MAAM,UAAU,UAAU,CAAC,KAAc;IACrC,MAAM,aAAa,GAAc,CAAC,GAAG,EAAE,SAAS,EAAE,IAAI,CAAC,CAAC;IACxD,OAAO,CAAC,aAAa,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC;AAC1C,CAAC"}

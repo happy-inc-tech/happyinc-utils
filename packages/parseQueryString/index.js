@@ -6,4 +6,3 @@ export default function parseQueryString(queryString) {
         return total;
     }, {});
 }
-//# sourceMappingURL=index.js.map

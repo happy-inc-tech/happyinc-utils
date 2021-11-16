@@ -14,4 +14,3 @@ export default function multipleArrayIntersection(...arrs) {
 function intersectionOfTwo(arr1, arr2) {
     return arr1.filter((v) => arr2.includes(v));
 }
-//# sourceMappingURL=index.js.map
