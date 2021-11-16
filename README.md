@@ -53,14 +53,25 @@ notNullish(NaN) // false
 notNullish(null) // false
 ```
 
-#### 7. randomUUID
+#### 7. parseQueryString
+Превращает строку с query-параметрами в объект
+ключ-значение, и то, и другое - строки. Можно
+передать параметр, а если входных параметров нет - 
+берётся `window.location.search`.  
+Пример:
+```javascript
+parseQuery('?value=test&count=1')
+// { value: 'test', count: '1' }
+```
+
+#### 8. randomUUID
 Возвращает случайный UUID.  
 Пример:
 ```javascript
 randomUUID() // '1d63cd68-284d-4ca9-a4a2-d18170cc8186'
 ```
 
-#### 8. VueReactiveMap
+#### 9. VueReactiveMap
 Эмуляция ES6 Map на объектах для поддержки реактивности в Vue2.  
 Пример: 
 ```javascript
