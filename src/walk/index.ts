@@ -4,16 +4,16 @@
  * @param callback
  * @param childrenKey
  */
-export default function walk(
-    traversable: unknown | unknown[],
-    callback: WalkCallback,
+export default function walk<T = any>(
+    traversable: any | any[],
+    callback: WalkCallback<T>,
     childrenKey = 'children'
 ): void {
     if (Array.isArray(traversable)) {
-        traversable.forEach((element: unknown) => walk(element, callback));
+        traversable.forEach((element: any) => walk(element, callback));
     } else {
         callback(traversable);
-        const nextTraversable = (traversable as Record<string, unknown>)[
+        const nextTraversable = (traversable as Record<string, any>)[
             childrenKey
         ];
         if (Array.isArray(nextTraversable) && nextTraversable.length) {
@@ -22,4 +22,4 @@ export default function walk(
     }
 }
 
-type WalkCallback = (node: unknown) => void;
+type WalkCallback<T> = (node: T) => void;
