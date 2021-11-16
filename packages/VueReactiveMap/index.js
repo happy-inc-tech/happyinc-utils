@@ -4,10 +4,9 @@
  */
 import Vue from 'vue';
 export default class VueReactiveMap {
-    initialValue;
-    storage = {};
     constructor(initialValue) {
         this.initialValue = initialValue;
+        this.storage = {};
         if (this.initialValue) {
             this.initialValue.forEach(([key, value]) => this.set(key, value));
         }
