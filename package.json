@@ -41,6 +41,7 @@
     "./captalizeFirstLetter": "./packages/captalizeFirstLetter/index.js",
     "./chunkArray": "./packages/chunkArray/index.js",
     "./decapitalizeFirstLetter": "./packages/decapitalizeFirstLetter/index.js",
+    "./downloadFileFromBlob": "./packages/downloadFileFromBlob/index.js",
     "./isUUID": "./packages/isUUID/index.js",
     "./notNullish": "./packages/notNullish/index.js",
     "./parseQueryString": "./packages/parseQueryString/index.js",

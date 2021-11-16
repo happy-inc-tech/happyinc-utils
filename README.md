@@ -34,7 +34,16 @@ capitalizeFirstLetter('String')
 // 'string'
 ```
 
-#### 5. isUUID
+#### 5. downloadFileFromBlob
+Скачивает файл из объекта Blob (к примеру, если файл запрошен
+через Fetch).  
+Пример: 
+```javascript
+const myFile = await fetchFile();
+downloadFileFromBlob(myFile, 'My_file.txt')
+```
+
+#### 6. isUUID
 Является ли введённая строка UUID.  
 Пример: 
 ```javascript
@@ -42,7 +51,7 @@ isUUID('70f48ad9-6cc9-4f86-919d-022972187da2') // true
 isUUID('string') // false 
 ```
 
-#### 6. notNullish
+#### 7. notNullish
 Является ли переданное значение логически непустым
 (не равно `null`, `undefined`, `NaN`).  
 Пример: 
@@ -53,7 +62,7 @@ notNullish(NaN) // false
 notNullish(null) // false
 ```
 
-#### 7. parseQueryString
+#### 8. parseQueryString
 Превращает строку с query-параметрами в объект
 ключ-значение, и то, и другое - строки. Можно
 передать параметр, а если входных параметров нет - 
@@ -64,14 +73,14 @@ parseQuery('?value=test&count=1')
 // { value: 'test', count: '1' }
 ```
 
-#### 8. randomUUID
+#### 9. randomUUID
 Возвращает случайный UUID.  
 Пример:
 ```javascript
 randomUUID() // '1d63cd68-284d-4ca9-a4a2-d18170cc8186'
 ```
 
-#### 9. VueReactiveMap
+#### 10. VueReactiveMap
 Эмуляция ES6 Map на объектах для поддержки реактивности в Vue2.  
 Пример: 
 ```javascript
@@ -86,7 +95,7 @@ map.has(NaN) // true
 Реализованы все методы, поведение максимально приближено
 к реальному.
 
-#### 10. walk
+#### 11. walk
 Обход всех уровней вложенных объектов и массивов. На каждый уровень
 вызывается переданный коллбэк.  
 Аргументы: объект\массив, коллбэк, ключ для свойства вложенных (по 
