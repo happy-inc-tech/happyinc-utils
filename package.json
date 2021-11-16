@@ -47,5 +47,12 @@
     "./parseQueryString": "./packages/parseQueryString/index.js",
     "./randomUUID": "./packages/randomUUID/index.js",
     "./walk": "./packages/walk/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "chunkArray": [
+        "./packages/chunkArray/index.d.ts"
+      ]
+    }
   }
 }
