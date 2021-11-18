@@ -2,7 +2,7 @@
 
 ### Хэлпер-функции, используемые в Happy Inc на JS
 
-#### 1. arrayIntersection
+#### arrayIntersection
 Ищет пересекающиеся элементы в N массивов.
 Пример:
 ```javascript
@@ -10,7 +10,7 @@ const intersection = arrayIntersection([1,2,3], [2,5,6], [10,11,2])
 // [2]
 ```
 
-#### 2. capitalizeFirstLetter
+#### capitalizeFirstLetter
 Делает первую букву в строке заглавной.  
 Пример:
 ```javascript
@@ -18,7 +18,7 @@ capitalizeFirstLetter('string')
 // 'String'
 ```
 
-#### 3. chunkArray
+#### chunkArray
 Делит массив на части размером по переданному аргументу.  
 Пример:
 ```javascript
@@ -26,7 +26,7 @@ chunkArray([1,2,3,4,5], 2)
 // [[1,2], [3,4], [5]]
 ```
 
-#### 4. decapitalizeFirstLetter
+#### decapitalizeFirstLetter
 Делает первую букву в строке строчной.  
 Пример:
 ```javascript
@@ -34,7 +34,7 @@ capitalizeFirstLetter('String')
 // 'string'
 ```
 
-#### 5. downloadFileFromBlob
+#### downloadFileFromBlob
 Скачивает файл из объекта Blob (к примеру, если файл запрошен
 через Fetch).  
 Пример: 
@@ -43,7 +43,19 @@ const myFile = await fetchFile();
 downloadFileFromBlob(myFile, 'My_file.txt')
 ```
 
-#### 6. isUUID
+#### getPropertyByPath 
+Возвращает значение по пути path из объекта object, не 
+выбрасывая ошибок в случае отсутствия какого-либо сегмента.
+Если значения нет - возвращает `undefined`.  
+Поддерживается только разделение точкой. Поддерживаются индексы массивов.  
+Пример:
+```javascript
+// user.data.activity.likes[0] = { from: '123', time: '...' } 
+const likes = getPropertyByPath(user, 'data.activity.likes.0.from')
+// '123
+```
+
+#### isUUID
 Является ли введённая строка UUID.  
 Пример: 
 ```javascript
@@ -51,7 +63,7 @@ isUUID('70f48ad9-6cc9-4f86-919d-022972187da2') // true
 isUUID('string') // false 
 ```
 
-#### 7. notNullish
+#### notNullish
 Является ли переданное значение логически непустым
 (не равно `null`, `undefined`, `NaN`).  
 Пример: 
@@ -62,7 +74,7 @@ notNullish(NaN) // false
 notNullish(null) // false
 ```
 
-#### 8. parseQueryString
+#### parseQueryString
 Превращает строку с query-параметрами в объект
 ключ-значение, и то, и другое - строки. Можно
 передать параметр, а если входных параметров нет - 
@@ -73,14 +85,14 @@ parseQuery('?value=test&count=1')
 // { value: 'test', count: '1' }
 ```
 
-#### 9. randomUUID
+#### randomUUID
 Возвращает случайный UUID.  
 Пример:
 ```javascript
 randomUUID() // '1d63cd68-284d-4ca9-a4a2-d18170cc8186'
 ```
 
-#### 10. VueReactiveMap
+#### VueReactiveMap
 Эмуляция ES6 Map на объектах для поддержки реактивности в Vue2.  
 Пример: 
 ```javascript
@@ -95,7 +107,7 @@ map.has(NaN) // true
 Реализованы все методы, поведение максимально приближено
 к реальному.
 
-#### 11. walk
+#### walk
 Обход всех уровней вложенных объектов и массивов. На каждый уровень
 вызывается переданный коллбэк.  
 Аргументы: объект\массив, коллбэк, ключ для свойства вложенных (по 
