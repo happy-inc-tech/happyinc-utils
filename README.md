@@ -92,6 +92,24 @@ parseQuery('?value=test&count=1')
 randomUUID() // '1d63cd68-284d-4ca9-a4a2-d18170cc8186'
 ```
 
+#### setPropertyByPath
+Устанавливает в ключ объекта object по пути path значение value.  
+Пример:
+```javascript
+const obj = { test: { values: [ { value: 0 } ] } };
+setPropertyByPath(obj, 'test.values.0.value', 1);
+// obj.test.values[0].value равен 1
+```
+
+#### stringifyClone
+Создаёт копию объекта через JSON.  
+Пример:
+```javascript
+const copy = stringifyClone({ test: 1 })
+console.log(copy)
+// { test: 1 }
+```
+
 #### VueReactiveMap
 Эмуляция ES6 Map на объектах для поддержки реактивности в Vue2.  
 Пример: 

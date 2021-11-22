@@ -9,7 +9,7 @@ module.exports = {
         'plugin:prettier/recommended'
     ],
     rules: {
-        'no-console': 'error',
+        'no-console': ['error', { allow: ['warn', 'error'] }],
         'no-debugger': 'error',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/explicit-function-return-type': 'error',
