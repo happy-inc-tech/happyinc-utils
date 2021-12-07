@@ -1,4 +1,4 @@
-import shortRandomId from '../src/shotRandomId';
+import shortRandomId from '../src/shortRandomId';
 
 describe('Random Id', function () {
     test('Generates valid iD', () => {
