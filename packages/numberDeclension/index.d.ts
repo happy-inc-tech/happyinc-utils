@@ -6,7 +6,4 @@
  * @param n
  * @param textForms
  */
-export default function numberDeclension(
-    n: number,
-    textForms: string[]
-): string;
+export default function numberDeclension(n: number, textForms: string[]): string;

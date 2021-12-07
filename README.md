@@ -138,3 +138,46 @@ walk(obj, (node) => collectedIds.push(node.id), 'children')
 console.log(collectedIds)
 // [1, 2]
 ```
+
+#### shortRandomId
+Создать случайный ID состоящий из 6 символов  
+Пример:
+```javascript
+const id = shortRandomId();
+console.log(id)
+// '5yo9m1'
+```
+
+#### safelyToFixed
+Безопасный toFixed, который не обвалит
+фронтовое приложение в случае ошибки
+Пример:
+```javascript
+const number = 1.1234;
+const result = safelyToFixed(number, 2, 'test');
+console.log(result)
+// '1.12test'
+```
+
+#### randomInRange
+Рандомное число из промежутка
+Пример:
+```javascript
+const min = 5;
+const max = 120;
+const randomNumber = randomInRange(min, max);
+console.log(randomNumber)
+// 6
+```
+
+#### numberDeclension
+Склонение числительных
+by dizzy2 (http://jsfiddle.net/user/dizzy2/fiddles/)
+Пример:
+```javascript
+const days = ['день', 'дня', 'дней'];
+const day = 17;
+const resultText = numberDeclension(day, days);
+console.log(resultText)
+// 'дней'
+```
