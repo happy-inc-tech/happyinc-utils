@@ -11,7 +11,7 @@ module.exports = {
     rules: {
         'no-console': ['error', { allow: ['warn', 'error'] }],
         'no-debugger': 'error',
-        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-explicit-any': 'error',
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/ban-ts-comment': 'off'
     }

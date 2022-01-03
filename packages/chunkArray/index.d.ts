@@ -3,4 +3,4 @@
  * @param arr
  * @param size
  */
-export default function chunkArray<T = any>(arr: T[], size: number): T[][];
+export default function chunkArray<T = unknown>(arr: T[], size: number): T[][];

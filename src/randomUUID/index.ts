@@ -4,7 +4,8 @@
 export default function randomUUID(): string {
     if (window && 'crypto' in window) {
         if ('randomUUID' in window.crypto)
-            return (window.crypto as any).randomUUID();
+            // @ts-ignore
+            return window.crypto.randomUUID();
         // @ts-ignore
         return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
             (

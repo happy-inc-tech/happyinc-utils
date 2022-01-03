@@ -10,9 +10,11 @@ export default function walk(traversable, callback, childrenKey = 'children') {
     }
     else {
         callback(traversable);
-        const nextTraversable = traversable[childrenKey];
-        if (Array.isArray(nextTraversable) && nextTraversable.length) {
-            walk(nextTraversable, callback, childrenKey);
+        if (childrenKey in traversable) {
+            const nextTraversable = traversable[childrenKey];
+            if (Array.isArray(nextTraversable) && nextTraversable.length) {
+                walk(nextTraversable, callback, childrenKey);
+            }
         }
     }
 }

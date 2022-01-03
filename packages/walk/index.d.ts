@@ -4,6 +4,6 @@
  * @param callback
  * @param childrenKey
  */
-export default function walk<T = any>(traversable: any | any[], callback: WalkCallback<T>, childrenKey?: string): void;
-declare type WalkCallback<T> = (node: T) => void;
+export default function walk<T = unknown>(traversable: T | T[], callback: WalkCallback<T>, childrenKey?: string): void;
+declare type WalkCallback<T = unknown> = (node: T) => void;
 export {};
