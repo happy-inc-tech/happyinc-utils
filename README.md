@@ -201,9 +201,28 @@ const result = await simpleRequest({
 ```
 
 #### parseJwt
-Вытащить данные из JWT-токена.
+Вытащить данные из JWT-токена.  
 Пример:
 ```javascript
 parseJwt('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2YWx1ZSI6NDJ9.W8JXpGLOempbaX02d2b2EWYfiLlmhMqpvkYJT9oRhvg');
 // { "value": 42 }
 ```
+
+#### createEventBus
+Создать простую шину событий.  
+API шины:
+* `dispatch(eventName: string, ...parameters: unknown[])` - отправить событие eventName, опционально - с данными;
+* `subscribe(eventName: string, callback: CallableFunction): CallableFunction` - подписать слушателя callback на 
+  событие eventName, возвращает функцию отписки;
+* `once(eventName: string, callback: CallableFunction)` - подписаться только на одну отправку события,
+    отписка происходит автоматически.  
+Пример:
+```javascript
+const bus = createEventBus()
+
+const usubscribe = bus.subscribe('test', (result) => console.log('Test event', result));
+bus.dispatch('test', 1);
+unsubscribe();
+// 'Test event 1'
+```
+
