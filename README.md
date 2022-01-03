@@ -182,7 +182,7 @@ console.log(resultText)
 // 'дней'
 ```
 
-### simpleRequest 
+#### simpleRequest 
 Отправить HTTP-запрос через XHR.
 Параметр - объект:
 * `url: string`;
