@@ -199,3 +199,11 @@ const result = await simpleRequest({
     }
 });
 ```
+
+#### parseJwt
+Вытащить данные из JWT-токена.
+Пример:
+```javascript
+parseJwt('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2YWx1ZSI6NDJ9.W8JXpGLOempbaX02d2b2EWYfiLlmhMqpvkYJT9oRhvg');
+// { "value": 42 }
+```
