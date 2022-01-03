@@ -181,3 +181,21 @@ const resultText = numberDeclension(day, days);
 console.log(resultText)
 // 'дней'
 ```
+
+### simpleRequest 
+Отправить HTTP-запрос через XHR.
+Параметр - объект:
+* `url: string`;
+* `method?: 'GET' | 'POST' | 'PUT' | 'DELETE'`;
+* `body?: unknown`;
+* `headers?: Record<string, string>`.
+Пример:
+```javascript
+const result = await simpleRequest({
+    url: 'test.com',
+    method: 'GET',
+    headers: {
+        'content-type': 'application/json'
+    }
+});
+```
