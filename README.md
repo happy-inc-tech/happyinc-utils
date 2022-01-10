@@ -226,3 +226,10 @@ unsubscribe();
 // 'Test event 1'
 ```
 
+#### addStylesOverride
+Добавляет переопределение стилей из строки.  
+Пример:
+```javascript
+addStylesOverride('.myblock { margin-top: 10px; }')
+```
+
