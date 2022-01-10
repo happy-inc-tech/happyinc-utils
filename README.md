@@ -233,3 +233,13 @@ unsubscribe();
 addStylesOverride('.myblock { margin-top: 10px; }')
 ```
 
+#### debounce
+Вызов функции f не более одного раза в ms секунд.  
+Пример:
+```javascript
+function myHeavyOperation(arg) { /* ... */ }
+const debounced = debounce(myHeavyOperation, 200)
+debounced()
+debounced()
+// будет вызвана только 1 раз, следующий раз возможен только через 200 мс.
+```
