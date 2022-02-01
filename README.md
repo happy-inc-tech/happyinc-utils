@@ -254,3 +254,10 @@ function myHeavyOperation(arg) { /* ... */ }
 const throttled = throttle(myHeavyOperation, 200)
 window.onresize = throttled
 ```
+
+#### delay
+Задержка выполнения через setTimeout, завёрнутая в промис.  
+Пример:
+```javascript
+await delay(200);
+```
