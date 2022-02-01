@@ -243,3 +243,14 @@ debounced()
 debounced()
 // будет вызвана только 1 раз, следующий раз возможен только через 200 мс.
 ```
+
+#### throttle
+Вызов функции f не более одного раза в ms секунд. Если 
+проигнорированный вызов является последним во время «задержки», 
+то он выполняется в конце.  
+Пример:
+```javascript
+function myHeavyOperation(arg) { /* ... */ }
+const throttled = throttle(myHeavyOperation, 200)
+window.onresize = throttled
+```
