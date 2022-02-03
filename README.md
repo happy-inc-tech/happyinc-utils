@@ -1,6 +1,8 @@
 # happyinc-utils
 
-### Хэлпер-функции, используемые в Happy Inc на JS
+Хэлпер-функции, используемые в Happy Inc на JS
+
+## Утилиты
 
 #### arrayIntersection
 Ищет пересекающиеся элементы в N массивов.
@@ -260,4 +262,33 @@ window.onresize = throttled
 Пример:
 ```javascript
 await delay(200);
+```
+
+## Preact
+
+#### useClassList
+Реактивный список классов на основе объекта, где ключ - строка
+(имя класса), а значение - Boolean (рендерить или нет).  
+Пример:
+
+```jsx
+import useClassList from "./index";
+import {useEffect} from "preact/compat";
+
+function MyComponent() {
+    const [disabled, setDisabled] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => setDisabled(true), 1000);
+    }, []);
+
+    const classes = useClassList({
+        block: true,
+        disabled
+    });
+
+    return <div className={classes}/>
+}
+
+// Через секунду классы у div поменяются
 ```

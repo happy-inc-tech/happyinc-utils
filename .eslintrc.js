@@ -14,6 +14,12 @@ module.exports = {
         'prefer-rest-params': 'off',
         '@typescript-eslint/no-explicit-any': 'error',
         '@typescript-eslint/explicit-function-return-type': 'error',
-        '@typescript-eslint/ban-ts-comment': 'off'
+        '@typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/no-unused-vars': 'error'
+    },
+    settings: {
+        react: {
+            pragma: 'h'
+        }
     }
 };
