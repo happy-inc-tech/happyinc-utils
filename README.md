@@ -333,3 +333,24 @@ function TestComponent() {
 }
 // При клике на div с data-testid === content блок пропадёт
 ```
+
+#### If/Else (conditions)
+Компоненты-условия для читаемого отображения условной отрисовки.
+Компонент `Else` должен быть вложен в `If`, и покажется только
+если условие `cond` ложно. Блоков `Else` может быть несколько.
+Поддерживаются вложенные условия.  
+Пример:
+```jsx
+function TestComponent({ condition = true }) {
+    return (
+        <div>
+            <If cond={condition}>
+                <div>Condition true</div>
+                <Else>
+                    <div>Condition false</div>
+                </Else>
+            </If>
+        </div>
+    );
+}
+```
