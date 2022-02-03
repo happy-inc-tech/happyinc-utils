@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { useRef, useState } from 'preact/hooks';
-import { render, fireEvent, screen, waitFor } from '@testing-library/preact';
+import { render, fireEvent, screen } from '@testing-library/preact';
 import useOutsideClick from '../../../src/preact/hooks/useOutsideClick';
 
 function TestComponent() {
