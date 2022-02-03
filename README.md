@@ -303,8 +303,33 @@ function MyComponent() {
 
     return (
         <div>
-            {mouned && 'Mounted!'}
+            {mounted && 'Mounted!'}
         </div>
     )
 }
+```
+
+#### useOutsideClick
+Хук. Проверка, случился ли клик внутри Ref или снаружи.  
+Пример:
+```jsx
+function TestComponent() {
+    const [visible, setVisible] = useState(true);
+    const contentRef = useRef(null);
+
+    useOutsideClick(contentRef, () => setVisible(false), visible);
+
+    return (
+        <div data-testid={'wrapper'}>
+            <br /> <br />
+            {visible && (
+                <div data-testid={'content'} ref={contentRef}>
+                    Content
+                    <div data-testid={'content-child'} />
+                </div>
+            )}
+        </div>
+    );
+}
+// При клике на div с data-testid === content блок пропадёт
 ```
