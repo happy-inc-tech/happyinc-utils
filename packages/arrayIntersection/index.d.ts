@@ -1,5 +1,5 @@
 /**
  * Ищет пересекающиеся значения в N массивах
- * @param arrs
+ * @param arrays
  */
-export default function multipleArrayIntersection(...arrs: ReadonlyArray<unknown>[]): ReadonlyArray<unknown>;
+export default function arrayIntersection<T = unknown>(...arrays: ReadonlyArray<T>[]): ReadonlyArray<T>;
