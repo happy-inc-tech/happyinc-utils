@@ -41,7 +41,7 @@ describe('array Difference', function () {
         const [arr1, arr2] = testCase4
         expect(() => arrayDifference(arr1,arr2)).not.toThrowError()
         const result = arrayDifference(arr1,arr2)
-        expect(result.length).toBe(0)
+        expect(result).toEqual([0, 1, 2, 3, 4])
     })
 
     test('If array is has non-primitive', () => {

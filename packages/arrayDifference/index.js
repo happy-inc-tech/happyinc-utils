@@ -9,11 +9,11 @@ export default function arrayDifference(firstArray, secondArray, eliminateDuplic
     const elementMap = new Map();
     let result = [];
     if (firstArray.length === 0 || secondArray.length === 0)
-        return result;
+        return merged;
     for (const item of merged) {
         const itemValue = valueGetter(item);
         if (itemValue === Object(itemValue)) {
-            throw new Error('[arrayDifference]: itemValue return non-primitive');
+            throw new Error('[arrayDifference]: value getter return non-primitive');
         }
         if (elementMap.has(item)) {
             if (eliminateDuplicate) {

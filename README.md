@@ -15,6 +15,7 @@ const intersection = arrayIntersection([1,2,3], [2,5,6], [10,11,2])
 #### arrayDifference
 Ищет не пересекающиеся элементы в двух массивах.
 Может принимать 3 аргумент - удаление дублирующих элементов (`true`/`false`) 
+valueGetter - функция получения значений
 Пример:
 ```javascript
 const difference = arrayDifference([3,1,1,0,5,8], [1,2,5,4,8,12])

@@ -13,13 +13,13 @@ export default function arrayDifference<T = unknown>(
     const merged = ([] as T[]).concat(firstArray, secondArray);
     const elementMap = new Map();
     let result: T[] = [];
-    if (firstArray.length === 0 || secondArray.length === 0) return result;
+    if (firstArray.length === 0 || secondArray.length === 0) return merged;
 
     for (const item of merged) {
         const itemValue = valueGetter(item);
         if (itemValue === Object(itemValue)) {
             throw new Error(
-                '[arrayDifference]: itemValue return non-primitive'
+                '[arrayDifference]: value getter return non-primitive'
             );
         }
         if (elementMap.has(item)) {
