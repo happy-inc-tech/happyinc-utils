@@ -1,3 +1,6 @@
+### 23.04.2022
+* add: arrayGroupBy
+
 ## v1.1.0 (14.02.2022)
 * feat: arrayDifference;
 * feat: Preact - `useClassList`, `useMounted`, `useOutsideClick`, `If/Else`

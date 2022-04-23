@@ -4,6 +4,53 @@
 
 ## Утилиты
 
+#### arrayGroupBy
+Группировка массива в объект по определённому
+строковому признаку.  
+Пример:
+```javascript
+const testArr = [
+    {
+        id: '1',
+        value: 1,
+        parent: 's'
+    },
+    {
+        id: '2',
+        value: 2,
+        parent: 'd'
+    },
+    {
+        id: '3',
+        value: 3,
+        parent: 'd'
+    }
+];
+
+const result = arrayGroupBy(testArr, (element) => element.parent)
+// {
+//   "s": [
+//      {
+//          id: '1',
+//          value: 1,
+//          parent: 's'
+//      }
+//   ],
+//   "d": [
+//      {
+//          id: '2',
+//          value: 2,
+//          parent: 'd'
+//      },
+//      {
+//          id: '3',
+//          value: 3,
+//          parent: 'd'
+//      }
+//   ]
+// }
+```
+
 #### arrayIntersection
 Ищет пересекающиеся элементы в N массивов.
 Пример:
