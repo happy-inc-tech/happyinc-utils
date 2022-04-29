@@ -1,3 +1,6 @@
+### 29.04.2022
+* fix: getPropertyByPath возвращает нулевые значения (0, null, "").
+
 ### 23.04.2022
 * add: arrayGroupBy
 

@@ -16,7 +16,10 @@ export default function getPropertyByPath(
     let returnData = object;
     while (pathIdx < pathSegments.length) {
         const nextSegment = pathSegments[pathIdx];
-        if (returnData[nextSegment] || returnData[Number(nextSegment)]) {
+        if (
+            returnData[nextSegment] !== undefined ||
+            returnData[Number(nextSegment)] !== undefined
+        ) {
             returnData = Array.isArray(returnData)
                 ? returnData[Number(nextSegment)]
                 : (returnData[nextSegment] as Record<string, unknown>);
