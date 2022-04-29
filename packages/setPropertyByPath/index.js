@@ -5,7 +5,6 @@
  * @param value
  */
 export default function setPropertyByPath(object, path, value) {
-    var _a;
     const pathSegments = path.split('.');
     let targetProp = object;
     for (let i = 0; i < pathSegments.length; i++) {
@@ -13,7 +12,7 @@ export default function setPropertyByPath(object, path, value) {
         if (!last) {
             if (typeof targetProp !== 'object')
                 break;
-            targetProp = (_a = targetProp) === null || _a === void 0 ? void 0 : _a[pathSegments[i]];
+            targetProp = targetProp === null || targetProp === void 0 ? void 0 : targetProp[pathSegments[i]];
             if (!targetProp) {
                 console.warn('[setPropertyByPath] path segment does not exist:', pathSegments[i]);
                 break;

@@ -1,3 +1,8 @@
+## v1.1.1 (29.04.2022)
+* feat: arrayGroupBy;
+* fix: getPropertyByPath;
+* chore: pnpm update.
+
 ### 29.04.2022
 * fix: getPropertyByPath возвращает нулевые значения (0, null, "").
 

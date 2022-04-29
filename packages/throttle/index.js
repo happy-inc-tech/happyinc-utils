@@ -13,6 +13,7 @@ export default function throttle(f, ms) {
     function wrapper() {
         if (isThrottled) {
             savedArgs = arguments;
+            // eslint-disable-next-line @typescript-eslint/no-this-alias
             savedThis = this;
             return;
         }
