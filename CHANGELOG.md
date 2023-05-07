@@ -1,3 +1,7 @@
+## v1.1.2 (07.05.2022)
+* chore: use yarn;
+* fix: randomUUID.
+
 ## v1.1.1 (29.04.2022)
 * feat: arrayGroupBy;
 * fix: getPropertyByPath;

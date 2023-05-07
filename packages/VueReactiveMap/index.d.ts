@@ -2,8 +2,8 @@
  * Эмуляция ES6 Map на объектах, чтобы было удобно и реактивно для Vue2.
  * Реализованы все методы Map.
  */
-export declare type InitialMapValue = ReadonlyArray<[unknown, unknown]>;
-export declare type EachCallback = (value: unknown, key?: unknown, map?: VueReactiveMap) => boolean | void;
+export type InitialMapValue = ReadonlyArray<[unknown, unknown]>;
+export type EachCallback = (value: unknown, key?: unknown, map?: VueReactiveMap) => boolean | void;
 export interface StoredItem {
     originalKey: unknown;
     value: unknown;
